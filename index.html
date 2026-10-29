@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelioMC — Helio Launcher</title>
+    <meta name="description" content="Helio is an open-source, CLI-first Minecraft launcher built with Rust and Ratatui. A keyboard-friendly, resource-conscious alternative to GUI-heavy launchers.">
+    <meta property="og:title" content="HelioMC — Helio Launcher">
+    <meta property="og:description" content="Open-source CLI-first Minecraft launcher built with Rust and Ratatui.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://helio.omhackz.top/">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <script>
+        // Prevent theme flash
+        (function() {
+            const savedTheme = localStorage.getItem('heliomc-theme') || 'system';
+            if (savedTheme === 'dark' || (savedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo" aria-label="HelioMC Home">HelioMC</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link nav-link-active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/downloads" class="nav-link">Downloads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/docs" class="nav-link">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/wiki" class="nav-link">Wiki</a>
+                    </li>
+                </ul>
+                <div class="nav-external">
+                    <a href="https://github.com/OmHackz/Helio" target="_blank" rel="noopener noreferrer" class="nav-external-link" aria-label="View on GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://dsc.gg/HelioMC-launcher" target="_blank" rel="noopener noreferrer" class="nav-external-link" aria-label="Join Discord">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0077-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                        </svg>
+                        <span>Discord</span>
+                    </a>
+                </div>
+                <div class="nav-theme">
+                    <button class="theme-btn" id="themeBtn" aria-label="Change theme" title="Change theme">
+                        <svg class="theme-icon theme-icon-system" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <span class="theme-label">System</span>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button class="theme-option" data-theme="system">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <span>System</span>
+                        </button>
+                        <button class="theme-option" data-theme="light">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <span>Light</span>
+                        </button>
+                        <button class="theme-option" data-theme="dark">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            <span>Dark</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Helio <span class="hero-title-accent">Launcher</span></h1>
+                    <p class="hero-subtitle">Open-source, CLI-first Minecraft launcher built with Rust and Ratatui</p>
+                    <p class="hero-description">
+                        A keyboard-friendly, resource-conscious alternative to traditional GUI-heavy launchers. 
+                        Powered by a command-line interface and terminal user interface for efficient, direct control.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="/downloads" class="btn btn-primary">Download Helio</a>
+                        <a href="https://github.com/OmHackz/Helio" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="hero-terminal">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                            </div>
+                            <span class="terminal-title">terminal</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-cmd">helio</span>
+                            </div>
+                            <div class="terminal-line terminal-line-output">
+                                <span class="terminal-text">Helio - Minecraft Launcher</span>
+                            </div>
+                            <div class="terminal-line terminal-line-output">
+                                <span class="terminal-text">TUI Mode Active | Press ? for help</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-cursor">_</span>
+                            </div>
+                            <div class="terminal-note">Simulated terminal content - actual interface may vary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">What is Helio?</h2>
+                <p class="section-description">
+                    Helio is an open-source Minecraft launcher built primarily around a command-line interface (CLI) and a terminal user interface (TUI) using Rust and Ratatui.
+                    It's designed for users who value efficiency, keyboard control, and a lightweight approach to managing Minecraft instances.
+                    The launcher is not exclusively for offline or unofficial accounts - account modes are described only where support is confirmed.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Easy to Use</h3>
+                        <p class="feature-description">Approachable for beginners while remaining powerful for experienced users. Clear workflows and intuitive commands.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Open Source</h3>
+                        <p class="feature-description">Fully open source. Inspect, modify, and contribute to the codebase. Community-driven development.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Keyboard-First</h3>
+                        <p class="feature-description">Navigate and control everything with your keyboard. Efficient workflow without mouse dependency.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Efficient Design</h3>
+                        <p class="feature-description">Resource-conscious and lightweight. Focused on performance without the overhead of heavy GUI frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Built With</h2>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h3 class="tech-name">Rust</h3>
+                        <p class="tech-description">A systems programming language focused on safety, speed, and concurrency.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h3 class="tech-name">Ratatui</h3>
+                        <p class="tech-description">A Rust library for building rich terminal user interfaces with a focus on ease of use and flexibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="downloads-preview">
+                    <h2 class="section-title">Ready to Try Helio?</h2>
+                    <p class="section-description">Download the latest version for your platform or build from source.</p>
+                    <a href="/downloads" class="btn btn-primary btn-large">Go to Downloads</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">HelioMC</h3>
+                    <p class="footer-description">Open-source CLI-first Minecraft launcher</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/downloads">Downloads</a></li>
+                        <li><a href="/docs">Docs</a></li>
+                        <li><a href="/wiki">Wiki</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/OmHackz/Helio" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://dsc.gg/HelioMC-launcher" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">License</h4>
+                    <p class="footer-license">Licensed under AGPL-3.0</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; HelioMC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

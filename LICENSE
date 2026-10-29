@@ -1,0 +1,314 @@
+                    GNU AFFERO GENERAL PUBLIC LICENSE
+                       Version 3, 19 November 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+                            Preamble
+
+  The GNU Affero General Public License is a free, copyleft license for
+software and other kinds of works, specifically designed to ensure
+cooperation with the community in the case of network server software.
+
+  The licenses for most software and other practical works are designed
+to take away your freedom to share and change the works.  By contrast,
+our General Public Licenses are intended to guarantee your freedom to
+share and change all versions of a program--to make sure it remains free
+software for all its users.
+
+  This license, similar to the GNU General Public License, is intended
+to guarantee your freedom to share and change free works--to make sure the
+work remains free for all its users.
+
+  When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+this service if you wish), that you receive source code or can get it
+if you want it, that you can change the software or use pieces of it
+in new free programs, and that you know you can do these things.
+
+  To protect your rights, a license will grant you the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the work, and to grant recipients of the work the rights
+that are granted by this license.
+
+  For the implementation of this license, we recommend that you
+consider using the GPL version 3 or later as the license for a copy
+of the program.  If you can, you should choose the license that
+provides your rights with the most protection against being enjoined
+from exercising those rights.
+
+  The GNU Affero General Public License addresses how to deal with
+the possibility of a work being used as a server-side application
+without providing the source code to the users of that application.
+
+  By contrast, the GNU General Public License is a conventional
+copyleft license that is designed to prohibit you from sharing or
+changing it.  If you modified this file, you would not be able to use
+it in any commercial application.
+
+  The GNU Affero General Public License is designed to take this
+further and requires the same copyleft that would apply if the work
+were made available to everyone.  This ensures that a larger community
+can benefit from this work.
+
+  An additional term to the GNU Affero General Public License allows
+for linking or combining a work with other work not covered by this
+license.  The combination is made available under the terms of this
+license, and the sections of this license will be relevant to the
+combination if the work is used outside of the network.
+
+  A copyright notice and a notice of attribution from the work
+must accompany all copies of the licensed work or derivative
+works.
+
+  The full text of the license is below.
+
+                    GNU AFFERO GENERAL PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  0. Definitions.
+
+    "This License" refers to version 3 of the GNU Affero General Public
+License.
+
+    "Copyright" also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+    "The Program" refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as "you".  "Licensees" and
+"recipients" may be individuals or organizations.
+
+    "To "modify" a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting derivative work is called a "modified version"
+of the earlier work or a work "based on" the earlier work.
+
+    "A "covered work" means either the unmodified Program or a work based
+on the Program.
+
+    "The "source code" for a work means the preferred form of the work
+for making modifications to it.  "Object code" means any non-source
+form of a work.
+
+    "The "Standard Interface" means an interface that either is an official
+standard defined by a recognized standards body, or, in the case of
+interfaces specified for a particular type of software, that interface
+was recognized by that type of software as being acceptable for
+use in that software.  The "System Libraries" of an executable work
+include anything, in the whole or part, of a work that is in the public
+domain, or made available under a free license, and the interface with
+the user is not Standard Interface.  If you use the "System Libraries"
+and make this use of a System Libraries in a GNU product covered by this
+License, you are not obligated to do so.  If you do not wish to do so,
+you will only make copies of that work and act as per your choice of this
+License.
+
+    "Source for a work" means the preferred form of the work for
+making changes, including but not limited to software source code,
+documentation source, and configuration files.
+
+    "Secondary Component" means a component of the covered work
+which is independent of the Program, and those are separated by
+a temporary or permanent physical separation.  This separation
+may be between the source code files or the object code files.
+
+    "Secondary License" means a license granted by the original
+licensor or some other party that allows users to use or distribute
+the Program under the License terms, but in addition, has different
+terms from the original License or that allows users to link
+or combine the Program with other works licensed under a different
+license, through secondary licenses.  These licenses are limited
+to licenses that authorizes all rights granted under the original
+License to do things differently than those granted by the original
+License.
+
+  0. Definitions.
+
+    "This License" refers to version 3 of the GNU Affero General Public
+License.
+
+    "Copyright" also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+    "The Program" refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as "you".  "Licensees" and
+"recipients" may be individuals or organizations.
+
+    "To "modify" a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting derivative work is called a "modified version"
+of the earlier work or a work "based on" the earlier work.
+
+    "A "covered work" means either the unmodified Program or a work based
+on the Program.
+
+    "The "source code" for a work means the preferred form of the work
+for making modifications to it.  "Object code" means any non-source
+form of a work.
+
+    "The "Standard Interface" means an interface that either is an official
+standard defined by a recognized standards body, or, in the case of
+interfaces specified for a particular type of software, that interface
+was recognized by that type of software as acceptable for use in that
+software.  The "System Libraries" of an executable work include anything,
+in the whole or part, of a work that is in the public domain or made
+available under a free license, and the interface with the user is not
+Standard Interface.  If you use the "System Libraries" and make this use
+of a System Libraries in a GNU product covered by this License, you are
+not obligated to do so.  If you do not wish to do so, you will only make
+copies of that work and act as per your choice of this License.
+
+    "Source for a work" means the preferred form of the work for
+making changes, including but not limited to software source code,
+documentation source, and configuration files.
+
+    "Secondary Component" means a component of the covered work which
+is independent of the Program, and that component is either (1) separate
+source code files or (2) object code files under a different license.
+
+    "Secondary License" means a license granted by the original
+licensor or a third party that allows users to use or distribute
+the Program under the License terms, but has terms which differ
+from the original License or which is compatible with the original
+License.
+
+  1. Source Code.
+
+    The source code for a covered work means all the source code for all
+modules it contains, plus any associated interface definition files,
+plus the scripts used to control compilation and installation of the
+object code.  However, if the work is some kind of product, the source
+code must be provided if the user is using the product over a network.
+
+  2. Basic Permissions.
+
+    All rights granted under this License are granted for the term of
+copyright on the Program and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the unmodified Program.  The output from running a
+covered work is covered by this License only if the output, given its
+content, constitutes a covered work.  This License does not grant
+permission to use the Program's name, or license products derived from
+this Program without separate permission.
+
+  3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+    As a consequence of a section 3 (Protecting Users' Legal Rights
+From Anti-Circumvention Law) that is addressed below, you may not
+(acting as a basis for the denial of a range of protections) make use
+of any technology that would violate any applicable law relating to
+the prohibition of technological measures that are controlled by
+copyright of the US or other jurisdictions, or by the agreement on
+trade-related aspects of intellectual property rights (TRIPS), the
+term "covered work" for the purposes of this section is replaced by
+the definition of "user-generated work" in section 1 of this License.
+
+  4. Conveying Verbatim Copies.
+
+    You may convey verbatim copies of the Program's source code as you
+receive it, in any medium, provided that you conspicuously and
+appropriately publish on each copy an appropriate copyright notice;
+keep intact all notices stating that this License and any
+non-permissive terms added in accord with section 7 apply to the code;
+keep intact all notices of absence of any warranty; and give all
+recipients a copy of this License along with the Program.
+
+    You may charge a fee for the physical act of transferring a copy,
+and you may at your discretion offer warranty protection in exchange
+for a fee.
+
+  5. Conveying Modified Copies.
+
+    You may convey a work based on the Program, or the modifications to
+produce it from the Program, in the form of source code under the
+terms of section 4, provided that you also meet all of these conditions:
+
+    a) The work must be modified by changing or replacing it, so that it
+is based on the Program and can be changed by laws relating to
+copyright, and the recipient of the original work receives a copy of
+this License.
+
+    b) If you can communicate with a recipient of the work, or for any
+reason do not allow access to the source code of the work, you must
+convey the source code of that work by some means, in accordance with
+this License.  You may not impose any additional terms or restrictions
+on the recipients of the source code from the work.  The source code
+may not be distributed through any website, news group, or
+mailing list, unless these sites are closed to the public.
+
+    c) You must convey all source code, including any differences
+between the original work and the modified work, as well as the
+scripts used to control compilation and installation of the modified
+work, under the terms of this License.  The difference between the
+original work and the modified work is material, but not necessarily
+a complete difference.
+
+    d) If the work is integrated with a network server, you must provide
+the source code to the server as well as the work.  This is not always
+required by law, but is demanded by the terms of this License to ensure
+that a community develops this work.
+
+  6. Conveying Non-Source Form.
+
+    You may convey a covered work in object code form under the terms
+of section 4 and section 5, provided that you also convey the
+machine-readable source code under the terms of this License, in one
+of these ways:
+
+    a) Convey the object code in, or with, a physical product (including
+a physical distribution medium), accompanied by the information
+required by section 4 and section 5 on a durable physical medium
+customarily used for software interchange.
+
+    b) Convey the object code in, or with, a written offer, with
+access to copy the source code from a public place at no charge for
+at least three years, to give any recipient the object code a copy
+of the source code for at least three years after the object code
+was transferred to the recipient.
+
+    c) Convey the object code by installing, releasing, or promoting
+the object code and the source code on a public website for no charge,
+with access to copy the source code from that website by the user,
+at least three years after the date on which you last exercise
+your rights under this License on the covered work.
+
+    7. Additional Terms.
+
+    "Additional permissions" are terms that supplement the terms of this
+License by allowing rights to be granted beyond those granted by this
+License.  If a covered work is incorporated into an additional license
+system, additional permissions will be granted to the recipients
+of the covered work under the License terms with additional
+permissions.  If additional permissions are related to a particular
+work, a wide range of permissions is set for that work, and that work
+may be made use of under these conditions.  The additional permissions
+must be written separately and should clearly be marked with the
+appropriate notice.
+
+    "Supplemental terms" are terms that supplement the terms of this
+License by attempting to bless under some circumstances the
+protection of the recipients of the covered work, to alleviate
+one or more existing problems with the License, as well as to
+make sure the License remains free.
+
+    A covered work is a work under this License, regardless of being
+integrated with a network server.  This License is concerned with
+the possibility that the work being used is accessed over a
+network, even if it is hosted on a server itself.  The term "user
+interface" is defined in section 2 of this License as: a user
+interface is either a reviewable interface or a manipulative interface
+where the manipulation of the interface is controlled by user
+instructions, and the reviewable interface that was received or
+provided, or that was in the form that was intended to be received,
+is validated.
+
+    8. Termination.
+
+    If you cannot comply with any of the terms of this License for any
+reason, at the time of any violation you become a licensee as well as
+terminating your rights.  The licensee will become obligated to
+retire all rights granted under this License.  But if your rights
+have been reinstated, your license
+EOF
