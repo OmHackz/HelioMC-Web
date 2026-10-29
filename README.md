@@ -2,7 +2,6 @@
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-000000?style=for-the-badge&logo=gnu)](https://www.gnu.org/licenses/agpl-3.0)
 [![Website](https://img.shields.io/badge/Website-helio.omhackz.top-000000?style=for-the-badge&logo=vercel)](https://helio.omhackz.top)
-[![GitHub](https://img.shields.io/badge/GitHub-OmHackz%2FHelio-000000?style=for-the-badge&logo=github)](https://github.com/OmHackz/Helio)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-000000?style=for-the-badge&logo=discord)](https://dsc.gg/HelioMC-launcher)
 
 Official website for [Helio](https://github.com/OmHackz/Helio), an open-source CLI-first Minecraft launcher built with Rust and Ratatui.
